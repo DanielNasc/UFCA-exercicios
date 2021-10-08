@@ -1,12 +1,15 @@
 // Construa um algoritmo que leia três números do teclado e calcule a média. Se a média for
 // maior ou igual à sete, imprima: "Parabéns, você foi aprovado!". Caso contrário, imprima:
 // "Você fará prova nal!".
+#include <stdio.h>
+#include <locale.h>
 #include "get_num.h"
 
 #define TOTAL_NOTAS 3
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
     // Para evitar repetições caso eu queria reutilizar esse programa para mais notas depois,
     float notas[TOTAL_NOTAS];
     // é so criar um array de notas e criar um loop para preencher cada indice dele.
