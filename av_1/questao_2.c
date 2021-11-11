@@ -7,8 +7,13 @@ int fatorial(int n);
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-	int n = get_positive_int("um número"), 
-	p = get_positive_int("outro número");
+	int n = get_positive_int("um número"), p;
+
+	do
+	{
+		p = get_positive_int("outro número");
+		if (p >= n) printf("\nO segundo numero tem ue ser menor que o primeiro.\n");
+	} while (p >= n);
 
 	float arranjo = (float) fatorial(n) / fatorial(n - p);
 

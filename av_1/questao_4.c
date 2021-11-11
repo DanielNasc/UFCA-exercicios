@@ -17,7 +17,7 @@ int main()
     do
     {
         qtd_temp++;
-        float temp_now = get_int("uma temperatura em Celsius");
+        float temp_now = get_float("uma temperatura em Celsius");
         temp_celsius += temp_now;
         temp_fahrenheit += (temp_now * 9 / 5) + 32;
         opcao = get_int("deseja digitar outra temperatura? (1 - sim, outra tecla - não)");

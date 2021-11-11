@@ -7,7 +7,13 @@ float f(float x);
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-	float x = get_float("um número"), resultado;
+	float x, resultado;
+	do 
+	{
+		x = get_float("um valor x");
+		if (x == 16) printf("x tem que ser diferente de 16.\n");
+	} while (x == 16);
+
 	resultado = f(x);
 	printf("O resultado é %.2f\n", resultado);
     return 0;
