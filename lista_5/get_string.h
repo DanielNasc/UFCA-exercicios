@@ -6,7 +6,7 @@
 char *get_string(char *str_dsc, int max_size)
 {
     // Alocando memória para o vetor de caracteres
-    char *str = (char *)malloc(max_size * sizeof(char) + 1);
+    char *str = (char *)malloc((max_size + 1) * sizeof(char));
 
     // Pedir ao usuário para introduzir uma string
     printf("Digite %s:\n", str_dsc);
