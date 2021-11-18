@@ -22,9 +22,8 @@ int main()
     // Imprimindo o vetor
     printf("\nVetor: [ ");
     for (int i = 0; i < 10; i++)
-    {
         printf("%d ", vetor[i]);
-    }
+
     printf("]\n");
 
     // Imprimindo o menor valor

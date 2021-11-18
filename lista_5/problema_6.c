@@ -11,7 +11,7 @@
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-    char frase1[100], frase2[100], frase_concatenada[200];
+    char frase1[100], frase2[100]; 
 
     printf("Digite a primeira frase: ");
     scanf("%[^\n]", frase1);
@@ -21,10 +21,13 @@ int main()
     scanf("%[^\n]", frase2);
     getchar();
 
+    char frase_concatenada[strlen(frase1) + strlen(frase2) + 1];
+
     strcpy(frase_concatenada, frase1);
 
     for (int i = 0; i < strlen(frase2); i++)
         frase_concatenada[strlen(frase1) + i] = frase2[i];
+    frase_concatenada[strlen(frase1) + strlen(frase2)] = '\0';
 
     printf("Frase concatenada: %s\n", frase_concatenada);
 

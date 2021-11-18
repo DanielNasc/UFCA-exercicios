@@ -14,7 +14,7 @@ int main()
     setlocale(LC_ALL, "Portuguese");
 
     // Declaração de variáveis
-    int num[10], i, par = 0, impar = 0, soma_par = 0, soma_impar = 0;
+    int num[10], par = 0, impar = 0, soma_par = 0, soma_impar = 0;
 
     for (int i = 0; i < 10; i++)
     {
