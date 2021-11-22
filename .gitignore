@@ -1,7 +1,8 @@
 *
-!.gitignore
+!.git*
 !*.c
 !*.h
 !*.md
 !*/
+!*.py
 .vscode
