@@ -140,8 +140,9 @@ cidade * encontrar_cidade(cidade cidades[], int codigo, int tamanho)
 // Após atualizar a temperatura em Celsius, atualize a temperatura em Fahrenheit também
 // (usando a função da primeira questão).
 
-void altera_temperatura(cidade * cidade, float nova_temp_celsius)
+void altera_temperatura(cidade * cidade, float temp_celsius)
 {
+    float nova_temp_celsius = cidade->temp_c + temp_celsius;
     cidade->temp_c = nova_temp_celsius;
     cidade->temp_f = converter_c_para_f(nova_temp_celsius);
 }
