@@ -24,7 +24,7 @@ int main()
     // Na função principal (main), crie um vetor do tipo estrutura cidade com 3 elementos.
     // Chame a função que gera cidades 3 vezes (questão 3) e atribua cada cidade retornada
     // para uma região do vetor. (De preferência, tentem criar esse vetor na memória heap.)
-    cidade vetor_cidades[3];
+    cidade * vetor_cidades = (cidade *) malloc(3 * sizeof(cidade));
 
     printf("=== Preenchendo os campos das cidades ===\n");
     for (int i = 0; i < 3; i++)
@@ -78,6 +78,10 @@ int main()
 
     } while (opcao != 0);
 
+    // libera a memória alocada para o vetor de cidades
+    for (int i = 0; i < 3; i++)
+        free(vetor_cidades[i].nome);
+    free(vetor_cidades);
 
     return 0;
 }
