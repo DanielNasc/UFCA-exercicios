@@ -47,19 +47,20 @@ float get_positive_float(char *num_desc)
     return numero;
 }
 
-void get_int_array(int *array, int size, char * num_desc)
+void get_int_array(int *array, int size, char * vet_desc, char artigo)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("Digite o %iº %s: ", i + 1, num_desc);
+        printf("Digite %c %iº %s: ", artigo, i + 1, vet_desc);
         scanf("%i", (array + i));
     }
 }
 
-int * get_int_pointer(char *num_desc)
+void get_float_array(float *array, int size, char * vet_desc, char artigo)
 {
-    int * n = (int *) malloc(sizeof(int));
-    print_num_desc(num_desc);
-    scanf("%i", n);
-    return n;
+    for (int i = 0; i < size; i++)
+    {
+        printf("Digite %c %iº %s: ", artigo, i + 1, vet_desc);
+        scanf("%f", (array + i));
+    }
 }
