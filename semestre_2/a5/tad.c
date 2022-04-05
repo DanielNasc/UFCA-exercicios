@@ -83,6 +83,28 @@ bool shift(Tad *t) {
   return true;
 }
 
+bool inserirOrdenado(Tad * t, int valor) {
+  if (!t)
+    return false;
+
+  if (t->qtd == 0) {
+      inserir(t, valor);
+      return true;
+  }
+
+  for (int i = 0; i < t->qtd; i++) {
+    if (t->vetor[i] > valor) {
+      for (int j = t->qtd - 1; j >= i; j--)
+        t->vetor[j + 1] = t->vetor[j];
+      t->vetor[i] = valor;
+      t->qtd++;
+      return true;
+    }
+  }
+
+  return inserir(t, valor);
+}
+
 bool inserirInicio(Tad *t, int valor) {
   if (!t)
     return false;

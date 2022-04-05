@@ -14,6 +14,7 @@ bool shift(Tad *t);
 // para fzr em casa
 // inserir inicio, ordenado
 bool inserirInicio(Tad *, int);
+bool inserirOrdenado(Tad *, int);
 // remover inicio, valor, indice
 bool removerInicio(Tad *, int *);
 bool removerIndice(Tad *, int);

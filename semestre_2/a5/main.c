@@ -50,5 +50,17 @@ int main() {
 
   destruir(d);
 
+
+  Tad * t = criar(5);
+
+  inserirOrdenado(t, 2);
+  inserirOrdenado(t, 5);
+  inserirOrdenado(t, 24);
+  inserirOrdenado(t, 23);
+
+  imprimir(t);
+
+  destruir(t);
+
   return 0;
 }
