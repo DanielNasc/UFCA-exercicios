@@ -1,0 +1,23 @@
+01. Funções de Lista Simplesmente Encadeada:
+a) Inserir sem repetição no início. Isto é, ao tentar inserir algo com id/matrícula/código (escolha um) à algum já existe na lista, não permitir.
+b) Informações. Dizer quantos impares, pares, maior e menor valor de uma lista.
+c) Remover dois do início. Em vez de remover apenas o 1º, remove o 1º e 2º.
+d) Remover dois do fim. Em vez de remover apenas o último, remove o último e penultimo.
+e) Inverter. Use manipulação de ponteiros, não crie uma lista nova.
+f) Concatenar. Gere uma terceira lista e esvazie as outras duas.
+g) Cópia. Faça uma funçao que gere uma cópia de uma lista.
+h) Segmentar. Dado um inteiro n, divida a lista em duas, uma do primeiro elemento até n e outra de n em diante.
+
+02. Funções Fila:
+a) Inverter. Use manipulação de ponteiros, não crie uma fila nova.
+b) Limpeza central. Remova tudo da fila, exceto o primeiro e o último elemento.
+c) Limpeza extremidades. Remova o primeiro e o último elemento da fila.
+d) Ordenada. Função verifica se fila está ordenada (por id/matrícula/código).
+e) Mover. Faça uma função que permita você mover um elemento de uma fila para outra fila.
+
+
+03. Funções Pilha:
+a) Fundo. Acesse o elemento no fundo da pilha.
+b) Aglutinar. Dado um inteiro n, "junte" os n primeiros elementos de uma pilha somando seus valores (pilha de inteiros simples, ou faça isso usando apenas o campo id/matrícula/código).
+c) Inverter. Use uma segunda pilha para realizar a inversão.
+d) Mover. Faça uma função que permita você mover um elemento de uma pilha para outra pilha.
