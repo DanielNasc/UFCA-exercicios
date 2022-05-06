@@ -5,6 +5,7 @@
 void testes();
 
 int main() {
+  printf("Testes:\n");
   testes();
   return 0;
 }
