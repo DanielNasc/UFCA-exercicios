@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cFiles=$(find . -name "*.c")
+
+# Compilar todos os arquivos .c
+for file in $cFiles; do
+    gcc -c -Wall -Werror -o $(basename $file .c).o $file
+done
+
+# Linkar todos os arquivos .o
+files=""
+
+for file in $cFiles; do
+    files="$files $(basename $file .c).o"
+done
+
+gcc -o main $files
