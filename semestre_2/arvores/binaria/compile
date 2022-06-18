@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Compile the program
+
+cFiles=`ls *.c`
+
+for file in $cFiles; do
+    echo "Compiling $file"
+    # Remove the .c extension
+    file=${file%.c}
+    gcc -c $file.c -o $file.o
+done
+
+oFiles=`ls *.o`
+
+gcc -o program $oFiles
