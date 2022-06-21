@@ -5,7 +5,6 @@ int main() {
     Tree *tree = createTree();
 
     int values[] = { 50, 10, 70, 7, 20, 99, 9, 30, 40, 55, 53, 60, 8, 51 };
-
     int choose;
     printf("Você deseja inserir os valores manualmente ou usar os valores padrão?\n");
     printf("1 - Manual\n");
@@ -40,6 +39,11 @@ int main() {
     }
 
     printf("Nós inseridos com sucesso!\n");
+    if (balanceada(tree)) {
+        printf("A árvore é balanceada!\n");
+    } else {
+        printf("A árvore não é balanceada!\n");
+    }
     printf("\n");
 
     printf("Em que ordem deseja imprimir?\n");

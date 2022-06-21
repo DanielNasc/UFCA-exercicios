@@ -353,22 +353,38 @@ bool estritamente(Tree *tree) // verificar se uma árvore é estritamente binár
     return isBinaryTree(tree->root);
 }
 
-bool balancedHeight(Node *node) {
+/*
+    Uma arvore sera balanceada se a diferença entre a altura da subarvore esquerda e a da subarvore direita
+    for menor que 1.
+*/
+
+int balancedHeight(Node *node) {
     if (node == NULL) {
-        return true;
+        return 0;
     }
 
-    int left = balancedHeight(node->esq);
-    if (!left) {
-        return false;
+    int left = balancedHeight(node->esq); // altura da subarvore esquerda ou -1 se não for balanceada
+    if (left == -1) {
+        // se a subarvore esquerda não for balanceada, a arvore não é balanceada
+        // então retorna -1
+        return -1;
     }
 
-    int right = balancedHeight(node->dir);
-    if (!right) {
-        return false;
+    int right = balancedHeight(node->dir); // altura da subarvore direita ou -1 se não for balanceada
+    if (right == -1) {
+        // se a subarvore direita não for balanceada, a arvore não é balanceada
+        // então retorna -1
+        return -1;
     }
 
-    return abs(left - right) <= 1;
+    if (abs(left - right) > 1) {
+        // Se a diferença entre a altura da subarvore esquerda e a da subarvore direita for maior que 1,
+        // a arvore não é balanceada
+        return -1;
+    }
+
+    // Se a arvore for balanceada, retorna a maior altura entre as subarvores
+    return ((left > right) ? left : right) + 1;
 }
 
 bool balanceada(Tree *tree) // verificar se uma árvore é balanceada (retorna 1) ou não (retorna 0).
@@ -379,10 +395,10 @@ bool balanceada(Tree *tree) // verificar se uma árvore é balanceada (retorna 1
     }
 
     if (tree->root == NULL) {
-        return true;
+        return true;    
     }
 
-    return balancedHeight(tree->root);
+    return balancedHeight(tree->root) != -1;
 }
 
 Node *copyNode(Node *node) {
