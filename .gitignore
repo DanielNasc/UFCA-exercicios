@@ -1,5 +1,5 @@
 *
-!*.class
+!*.java
 !.git*
 !*.c
 !*.h
