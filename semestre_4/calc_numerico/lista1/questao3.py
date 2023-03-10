@@ -27,21 +27,20 @@ y = np.array([0.5, 4.0, 11.0, 25.0, 27.0, 9.0])
 
 a = np.array([0, 2])
 
-def area_Gauss(x, y):
+def area_gauss(x, y):
     N = len(x)
     S1 = 0
     S2 = 0
     
     if (N < 3 or N != len(y)): return None
 
-    for i in range(N - 1):
-        S1 += x[i] * y[i + 1]
-        S2 += y[i] * x[i + 1]
+    xx = np.concatenate((x, [x[0]]))
+    xy = np.concatenate((y, [y[0]]))
 
-    S1 += x[N - 1] * y[0]
-    S2 += y[N - 1] * y[0]
+    S1 = np.dot(x, xy[1:])
+    S2 = np.dot(xx[1:], y)
 
     return np.abs(S1 - S2) * .5
 
 if __name__ == '__main__':
-    print(area_Gauss(x, y))
+    print(area_gauss(x, y))

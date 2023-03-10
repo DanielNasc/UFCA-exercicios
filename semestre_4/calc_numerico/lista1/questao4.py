@@ -21,12 +21,11 @@ import numpy as np
 
 def zeroouum(x):
     index = np.where(x == 1)
-
-    if len(index) != 1:
-        return None
     
-    if len(index[0]) == 1:
-        return (True, index[0][0])
+    if len(index[0]) == 1 or (len(x) - len(index[0]) == 1):
+        return (True, 
+                index[0][0] if len(index[0]) == 1 else np.where(x == 0)[0][0]
+                )
 
 if __name__ == '__main__':
     print(zeroouum(np.array([0, 0, 0, 0, 0])))
