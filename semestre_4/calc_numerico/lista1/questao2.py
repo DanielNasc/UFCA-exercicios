@@ -28,6 +28,16 @@ def derivada(p, n):
 
     return np.multiply(p, c)
 
+def _derivada(p):
+    if len(P.shape) != 1:
+        raise Exception('P deve ser um array unidimensional')
+    
+    dP = p * np.arange(p.size - 1, -1, -1)
+
+    dp = np.resize(dP, p.size - 1)
+
+    return dp
+
 if __name__ == '__main__':
     # derivada_P = derivada(P2)
     # print(derivada_P)
