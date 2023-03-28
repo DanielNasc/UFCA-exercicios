@@ -1,0 +1,223 @@
+Serial:
+Time to initialize the array: 11.311869
+Found x at position 499999999
+Time to find x: 2.246046
+
+Parallel:
+Time to initialize the array: 9.072200
+Time to find x: 0.845723
+
+Speedup: 2.655769
+Efficiency: 1.327885
+Serial:
+Time to initialize the array: 11.847373
+Found x at position 499999999
+Time to find x: 2.085308
+
+Parallel:
+Time to initialize the array: 9.077510
+Time to find x: 0.682199
+
+Speedup: 3.056746
+Efficiency: 1.528373
+Serial:
+Time to initialize the array: 12.024502
+Found x at position 499999999
+Time to find x: 1.865179
+
+Parallel:
+Time to initialize the array: 8.704051
+Time to find x: 1.116320
+
+Speedup: 1.670828
+Efficiency: 0.835414
+Serial:
+Time to initialize the array: 10.463252
+Found x at position 499999999
+Time to find x: 1.698893
+
+Parallel:
+Time to initialize the array: 8.709619
+Time to find x: 1.010727
+
+Speedup: 1.680862
+Efficiency: 0.840431
+Serial:
+Time to initialize the array: 11.969747
+Found x at position 499999999
+Time to find x: 1.745639
+
+Parallel:
+Time to initialize the array: 10.602998
+Time to find x: 0.676878
+
+Speedup: 2.578956
+Efficiency: 1.289478
+Serial:
+Time to initialize the array: 10.571011
+Found x at position 499999999
+Time to find x: 1.781585
+
+Parallel:
+Time to initialize the array: 9.450771
+Time to find x: 0.732654
+
+Speedup: 2.431688
+Efficiency: 1.215844
+Serial:
+Time to initialize the array: 10.374464
+Found x at position 499999999
+Time to find x: 1.708992
+
+Parallel:
+Time to initialize the array: 9.513842
+Time to find x: 0.726026
+
+Speedup: 2.353899
+Efficiency: 1.176949
+Serial:
+Time to initialize the array: 10.099473
+Found x at position 499999999
+Time to find x: 1.846315
+
+Parallel:
+Time to initialize the array: 11.046890
+Time to find x: 2.179285
+
+Speedup: 0.847212
+Efficiency: 0.423606
+Serial:
+Time to initialize the array: 17.089094
+Found x at position 499999999
+Time to find x: 23.011998
+
+Parallel:
+Time to initialize the array: 10.219221
+Time to find x: 0.694094
+
+Speedup: 33.154017
+Efficiency: 16.577009
+Serial:
+Time to initialize the array: 11.406562
+Found x at position 499999999
+Time to find x: 11.599436
+
+Parallel:
+Time to initialize the array: 8.605706
+Time to find x: 1.241548
+
+Speedup: 9.342719
+Efficiency: 4.671360
+
+=======
+
+Serial:
+Time to initialize the array: 17.653849
+Found x at position 499999999
+Time to find x: 6.575394
+
+Parallel:
+Time to initialize the array: 12.643376
+Time to find x: 0.642903
+
+Speedup: 10.227654
+Efficiency: 5.113827
+Serial:
+Time to initialize the array: 10.194456
+Found x at position 499999999
+Time to find x: 1.932365
+
+Parallel:
+Time to initialize the array: 10.694716
+Time to find x: 0.617950
+
+Speedup: 3.127055
+Efficiency: 1.563527
+Serial:
+Time to initialize the array: 9.692436
+Found x at position 499999999
+Time to find x: 1.688342
+
+Parallel:
+Time to initialize the array: 11.584055
+Time to find x: 0.616313
+
+Speedup: 2.739422
+Efficiency: 1.369711
+Serial:
+Time to initialize the array: 9.808274
+Found x at position 499999999
+Time to find x: 1.780475
+
+Parallel:
+Time to initialize the array: 12.156923
+Time to find x: 0.625188
+
+Speedup: 2.847903
+Efficiency: 1.423951
+Serial:
+Time to initialize the array: 9.851118
+Found x at position 499999999
+Time to find x: 1.692374
+
+Parallel:
+Time to initialize the array: 10.202026
+Time to find x: 0.618575
+
+Speedup: 2.735922
+Efficiency: 1.367961
+Serial:
+Time to initialize the array: 9.971544
+Found x at position 499999999
+Time to find x: 2.129177
+
+Parallel:
+Time to initialize the array: 11.158768
+Time to find x: 0.716102
+
+Speedup: 2.973288
+Efficiency: 1.486644
+Serial:
+Time to initialize the array: 10.115618
+Found x at position 499999999
+Time to find x: 1.695458
+
+Parallel:
+Time to initialize the array: 10.984263
+Time to find x: 0.614999
+
+Speedup: 2.756847
+Efficiency: 1.378423
+Serial:
+Time to initialize the array: 10.058764
+Found x at position 499999999
+Time to find x: 1.792779
+
+Parallel:
+Time to initialize the array: 9.918675
+Time to find x: 0.846646
+
+Speedup: 2.117507
+Efficiency: 1.058753
+Serial:
+Time to initialize the array: 10.558971
+Found x at position 499999999
+Time to find x: 1.691250
+
+Parallel:
+Time to initialize the array: 10.878180
+Time to find x: 0.681132
+
+Speedup: 2.482998
+Efficiency: 1.241499
+Serial:
+Time to initialize the array: 9.955656
+Found x at position 499999999
+Time to find x: 1.692969
+
+Parallel:
+Time to initialize the array: 11.661876
+Time to find x: 0.637823
+
+Speedup: 2.654294
+Efficiency: 1.327147
