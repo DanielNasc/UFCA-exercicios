@@ -24,6 +24,17 @@ public class Campeonato {
                 }
             }
         }
+
+        // se houver empate no numero de pontos, o saldo de gols é o criterio de desempate
+        for (int i = 0; i < clubes.length; i++) {
+            for (int j = i + 1; j < clubes.length; j++) {
+                if (clubes[i].pontos == clubes[j].pontos && clubes[i].saldoGols < clubes[j].saldoGols) {
+                    Clube aux = clubes[i];
+                    clubes[i] = clubes[j];
+                    clubes[j] = aux;
+                }
+            }
+        }
     }
 
     public int sortearGols() {
@@ -46,15 +57,38 @@ public class Campeonato {
         }
     }
 
-    public void getClassificacao() {
+    public String getClassificacao() {
         sortClubes();
+        String classificacao = "";
         for (int i = 0; i < clubes.length; i++) {
-            System.out.println((i + 1) + "º " + clubes[i].nome + " - " + clubes[i].pontos + " pontos");
+            classificacao += (i + 1) + "º " + clubes[i].nome + " com " + clubes[i].pontos + " pontos e saldo de gols de " + clubes[i].saldoGols + ".\n";
         }
+
+        return classificacao;
     }
 
-    public void getCampeao() {
+    public String getCampeao() {
         sortClubes();
-        System.out.println("O campeão é o " + clubes[0].nome + " com " + clubes[0].pontos + " pontos");
+
+        int qtdCampeoes = 1;
+
+        // ver se, mesmo com o sort, houve empate entre os primeiros colocados
+        int i = 0;
+        while(i < clubes.length - 1 && clubes[i].pontos == clubes[i + 1].pontos && clubes[i].saldoGols == clubes[i + 1].saldoGols) {
+            qtdCampeoes++;
+            i++;
+        }
+
+        if (qtdCampeoes > 1) {
+            String campeoes = "Os campeões são: ";
+            for (int j = 0; j < qtdCampeoes; j++) {
+                campeoes += clubes[j].nome + ", ";
+            }
+
+            return campeoes.substring(0, campeoes.length() - 2) + " com " + clubes[0].pontos + " pontos e saldo de gols de " + clubes[0].saldoGols + ".";
+        }
+
+
+        return "O campeão é o " + clubes[0].nome + " com " + clubes[0].pontos + " pontos e saldo de gols de " + clubes[0].saldoGols + ".";
     }
 }

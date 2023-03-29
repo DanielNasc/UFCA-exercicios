@@ -7,7 +7,7 @@
  * 
 */
 
-public class Main {
+public class Test {
     public static void main(String[] args) {
         Clube[] clubes = new Clube[4];
         clubes[0] = new Clube("São Paulo");
@@ -17,7 +17,7 @@ public class Main {
 
         Campeonato campeonato = new Campeonato(clubes);
         campeonato.jogarCampeonato();
-        campeonato.getClassificacao();
-        campeonato.getCampeao();
+        System.out.println(campeonato.getClassificacao());
+        System.out.println(campeonato.getCampeao());
     }
 }
