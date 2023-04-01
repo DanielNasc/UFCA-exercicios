@@ -7,9 +7,11 @@ public class Campeonato {
 
     public void jogarCampeonato() {
         for (int i = 0; i < clubes.length; i++) {
-            for (int j = i + 1; j < clubes.length; j++) {
+            for (int j = 0; j < clubes.length; j++) {
+                if (i == j) continue;
                 jogarPartida(clubes[i], clubes[j]);
             }
+            System.out.println();
         }
     }
 
@@ -38,12 +40,14 @@ public class Campeonato {
     }
 
     public int sortearGols() {
-        return ((int) (Math.random() * 10)) % 5;
+        return ((int) (Math.random() * 10)) % 6;
     }
 
     public void jogarPartida(Clube c1, Clube c2) {
         int golsC1 = sortearGols();
         int golsC2 = sortearGols();
+
+        System.out.println(c1.nome + " " + golsC1 + " x " + golsC2 + " " + c2.nome);
 
         if (golsC1 > golsC2) {
             c1.ganhar(golsC1 - golsC2);
