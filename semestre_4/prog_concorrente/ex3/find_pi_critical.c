@@ -106,3 +106,37 @@ double pi_atomic(int N)
 
     return pi;
 }
+
+double pi_paralelo() {
+    int i;
+    double step, pi;
+    double start, end, time;
+
+    int STEPS = 100000000;
+    
+    printf("Iniciando método paralelo...\n");
+    start = omp_get_wtime();
+    step = 1.0/(double)STEPS;
+
+    #pragma omp parallel num_threads(4)
+    {
+        double x,sum=0.0;
+        int i, id, nthrds;
+        id = omp_get_thread_num();
+        nthrds = omp_get_num_threads();
+
+        for(i = id, sum = 0.0; i < STEPS; i = i+nthrds) {
+            x = i * step;
+            sum = sum + 4.0/(1.0 + x * x);
+        }
+        
+        #pragma omp critical
+            pi = step * sum;
+    }
+    
+    end = omp_get_wtime();
+    time = end - start;
+    printf("Pi: %f\n", pi);
+    printf("Tempo Paralelo: %f\n\n", time);
+    return time;
+}
