@@ -21,7 +21,7 @@ double variance(int *X, int N, double mean) {
         sd += pow(((double) X[i] - mean), 2)/N;
     }
 
-    return sqrt(sd);
+    return sd;
 }
 
 int *createRandomVariable(int N, int max) {
