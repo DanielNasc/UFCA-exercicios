@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "ex001",
+    "slug": "snack-20c2cf42-0a86-4743-b2fa-095665ecfc19",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "\nEXERCÍCIO 1: Hooks e Eventos\n\nImplemente uma tela de um App React Native, no expo.dev, que receba três entradas do usuário e implemente um botão que ao ser pressionado mostre a concatenação das três entradas em um texto abaixo do botão. Coloque também um botão para “limpar” o texto concatenado."
+  }
+}
