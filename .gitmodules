@@ -1,0 +1,3 @@
+[submodule "semestre_3/laboratorio_de_prog/trabalho-e-exercicios"]
+	path = semestre_3/laboratorio_de_prog/trabalho-e-exercicios
+	url = git@github.com:DanielNasc/lab-trabalho.git
