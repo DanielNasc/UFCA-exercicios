@@ -5,8 +5,20 @@ import axios from 'axios';
 
 import data from './data.json'
 import { TrabalhoCard } from './components/TrabalhoCard';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [trabalhos, setTrabalhos] = useState<Trabalho[]>([])
+
+  useEffect(() => {
+    api.get('/cppgi/api/avaliacoes/2370/1/TODAS')
+      .then(response => {
+        setTrabalhos(response.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
 
   return (
     <View style={styles.container}>
@@ -16,7 +28,7 @@ export default function App() {
 
       <ScrollView>
          {
-          data.map(trabalho => {
+          trabalhos.map(trabalho => {
             return <TrabalhoCard
                     trabalho={trabalho}
                     key={trabalho.id}
