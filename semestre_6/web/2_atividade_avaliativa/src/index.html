@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pró-Reitoria de Extensão (PROEX/UFCA)</title>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="container px-3 mx-auto">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="./assets/logo_ufca.png" alt="Logotipo da UFCA">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#apresentacao">Apresentação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Noticias">Notícias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Servicos">Serviços</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+      <hr class="mt-4"/>
+
+      <section id="apresentacao">
+        <h1 class="text-center">Pró-Reitoria de Extensão (PROEX/UFCA)</h1>
+        <p class="text-center">
+            A Pró-reitoria de Extensão da Universidade Federal do Cariri (PROEX/UFCA) é o setor responsável pela promoção
+            e
+            pelo gerenciamento das atividades de Extensão. A PROEX/UFCA parte do princípio da indissociabilidade entre o
+            ensino, a pesquisa, a cultura e a extensão, promovendo a interação transformadora entre o saber acadêmico e
+            popular.
+        </p>
+      </section>
+
+      <section id="Noticias">
+        <h2>Notícias</h2>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carousel-inner">
+            <!-- Itens do carrossel serão adicionados dinamicamente aqui -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        
+          <!-- Bootstrap JavaScript e jQuery (necessários para o carrossel) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        
+          <script>
+            // Fazer uma solicitação AJAX para obter dados do servidor JSON
+            $.ajax({
+              url: 'http://localhost:3000/projetos',
+              method: 'GET',
+              dataType: 'json',
+              success: function (data) {
+                // Dividir os dados em grupos de 3
+                var groupedData = [];
+                for (var i = 0; i < data.length; i += 3) {
+                  groupedData.push(data.slice(i, i + 3));
+                }
+        
+                // Construir os itens do carrossel dinamicamente
+                var carouselInner = $('#carousel-inner');
+                $.each(groupedData, function (index, group) {
+                  var activeClass = index === 0 ? 'active' : ''; // Adicionar a classe 'active' ao primeiro grupo
+                  var groupItems = `
+                    <div class="carousel-item ${activeClass}">
+                      <div class="row">
+                  `;
+                  $.each(group, function (itemIndex, projeto) {
+                    groupItems += `
+                      <div class="col-lg-4">
+                        <div class="card mb-4" style="width: 100%;">
+                          <img src="${projeto.img}" class="card-img-top" alt="${projeto.titulo}">
+                          <div class="card-body">
+                            <h5 class="card-title">${projeto.titulo}</h5>
+                            <p class="card-text">${projeto.descricao}</p>
+                            <a href="${projeto.link}" class="btn btn-primary" target="_blank">Saiba mais</a>
+                          </div>
+                        </div>
+                      </div>
+                    `;
+                  });
+                  groupItems += `
+                      </div>
+                    </div>
+                  `;
+                  carouselInner.append(groupItems);
+                });
+              },
+              error: function (error) {
+                console.log('Erro ao obter dados do servidor:', error);
+              }
+            });
+          </script>
+        
+        </div>
+      </section>
+
+      <section id="Servicos">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Agendamento de reuniões com NDEs, colegiados e diretorias de Unidades Acadêmicas para tratar sobre a
+                Integralização da Extensão Universitária</li>
+            <li>Apoio ao Encontro de Extensão da UFCA (ENEX)</li>
+            <li>Consultoria sobre normativos de Extensão</li>
+            <li>Divulgação de evento ou ação nos canais da PROEX e da UFCA</li>
+            <li>Orientações quanto a publicação no periódico científico da extensão Revista EntreAções: diálogos em extensão</li>
+            <li>Orientações sobre o processo de integralização da extensão</li>
+            <li>Requisição de empréstimo de banner</li>
+            <li>Solicitação de cadastro e substituição de bolsistas/voluntários de extensão</li>
+            <li>Solicitação de cadastro e substituição de coordenadores/tutores de ações de extensão</li>
+            <li>Solicitação de certificado de evento promovido pela PROEX/UFCA</li>
+            <li>Solicitação de correção de dados em certificado de participação em eventos promovidos pela PROEX/UFCA</li>
+            <li>Solicitação de dados sobre a extensão</li>
+            <li>Solicitação de declarações e certificados dos extensionistas</li>
+            <li>Solicitação de materiais de apoio (camiseta, blocos, cartazes, catálogo)</li>
+            <li>Submissão e cadastro de ações de extensão junto a editais de bolsas</li>
+            <li>Submissão e cadastro de ações de extensão na modalidade Fluxo Contínuo</li>
+            <li>UFCA Itinerante</li>
+        </ul>
+      </section>
+
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-4">
+      <div class="container py-3">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="mb-0">PROEX/UFCA - Pró-Reitoria de Extensão</p>
+              </div>
+              <div class="col-md-6 text-right">
+                  <p class="mb-0">Contato: <a href="mailto:proex@ufca.edu.br" class="text-white">proex@ufca.edu.br</a></p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>

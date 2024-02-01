@@ -1,0 +1,25 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+.logo {
+  width: 100px;
+}
+
+.card {
+    height: 100%;
+}
+.card-body {
+    padding: 1.25rem; /* Aumentar o padding nas laterais */
+}
+
+section {
+    margin-top: 4rem;;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Cor do ícone do botão de alternância em telas pequenas */
+}

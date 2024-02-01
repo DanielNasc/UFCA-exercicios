@@ -1,0 +1,23 @@
+{
+  "name": "2_atividade_avaliativa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "json-server": "json-server --watch projetos.json --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "json-server": "^1.0.0-alpha.23"
+  }
+}
